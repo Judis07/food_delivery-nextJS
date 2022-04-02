@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { API_URL } from "../../config/utils";
 import axios from "axios";
+import Link from "next/link";
 import Input from "../Inputs/inputs";
 // import Checkbox from "../Checkbox/checkbox";
 
@@ -85,9 +86,9 @@ const LoginForm = (props) => {
       </div>
 
       <div className="forgot-pass">
-        {/* <Link className="link" to="/forgot-password">
-          Forgot password
-        </Link> */}
+        <Link href="/forgot-password">
+          <a className="link">Forgot password</a>
+        </Link>
       </div>
     </form>
   );
