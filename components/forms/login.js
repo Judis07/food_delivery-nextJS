@@ -3,7 +3,9 @@ import { API_URL } from "../../config/utils";
 import axios from "axios";
 import Link from "next/link";
 import Input from "../Inputs/inputs";
-// import Checkbox from "../Checkbox/checkbox";
+import Checkbox from "../Checkbox/checkbox";
+
+import styles from "../../styles/login.module.scss";
 
 const LoginForm = (props) => {
   const [showPass, setShowPass] = useState(false);
@@ -73,11 +75,11 @@ const LoginForm = (props) => {
         isRequired={true}
       />
 
-      {/* <Checkbox label="Keep me logged in" /> */}
+      <Checkbox label="Keep me logged in" />
 
-      {!loading && error && <p className="err-msg">{error}</p>}
+      {!loading && error && <p className={styles.errMsg}>{error}</p>}
 
-      <div className="login-btn">
+      <div className={styles.loginBtn}>
         {loading ? (
           <button>Loading...</button>
         ) : (
@@ -85,9 +87,9 @@ const LoginForm = (props) => {
         )}
       </div>
 
-      <div className="forgot-pass">
+      <div className={styles.forgotPass}>
         <Link href="/forgot-password">
-          <a className="link">Forgot password</a>
+          <a className={styles.link}>Forgot password</a>
         </Link>
       </div>
     </form>

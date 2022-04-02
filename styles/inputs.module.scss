@@ -1,6 +1,6 @@
 @import "./variables.scss";
 
-.input-container {
+.inputContainer {
   margin: 2em 0;
   position: relative;
   label {
@@ -19,7 +19,7 @@
     margin: 0.5em 0;
   }
 
-  .input-icon {
+  .inputIcon {
     cursor: pointer;
     position: absolute;
     right: 5%;

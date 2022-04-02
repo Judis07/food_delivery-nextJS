@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import styles from "../../styles/inputs.module.scss";
+
 const Input = (props) => {
   const {
     type,
@@ -19,7 +21,7 @@ const Input = (props) => {
     setValue(event.target.value);
   };
   return (
-    <div className="input-container">
+    <div className={styles.inputContainer}>
       <label htmlFor={label}>{label}</label>
 
       <input
@@ -32,7 +34,7 @@ const Input = (props) => {
       />
 
       {icon && (
-        <div onClick={changeShowPass} className="input-icon">
+        <div onClick={changeShowPass} className={styles.inputIcon}>
           <img src={icon} alt="" />
         </div>
       )}

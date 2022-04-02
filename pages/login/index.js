@@ -1,25 +1,27 @@
 import Link from "next/link";
 import LoginForm from "../../components/forms/login";
 
+import styles from "../../styles/login.module.scss";
+
 const Login = () => {
   return (
-    <div className="login-container">
-      <div className="login-form">
-        <div className="logo">
+    <div className={styles.loginContainer}>
+      <div className={styles.loginForm}>
+        <div className={styles.logo}>
           <img
             src="https://res.cloudinary.com/dyvivj6d5/image/upload/v1648211535/logo_twd2km.svg"
             alt="Food Delivery"
           />
         </div>
 
-        <div className="login-detail">
+        <div className={styles.loginDetail}>
           <LoginForm />
         </div>
 
-        <div className="signup-section">
+        <div className={styles.signupSection}>
           Don’t have an account?{" "}
           <Link href="/register">
-            <a className="link">Sign up</a>
+            <a className={styles.link}>Sign up</a>
           </Link>
         </div>
       </div>
