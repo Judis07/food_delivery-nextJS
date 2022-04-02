@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "../../styles/input.scss";
 
 const Input = (props) => {
   const {

@@ -13,7 +13,7 @@ body {
   height: 100%;
 }
 
-#root {
+#__next {
   width: 100%;
   height: 100%;
 }
@@ -27,3 +27,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+@import "./inputs.scss";
+@import "./login.scss";
