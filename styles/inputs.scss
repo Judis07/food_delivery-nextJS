@@ -1,0 +1,28 @@
+@import "./variables.scss";
+
+.input-container {
+  margin: 2em 0;
+  position: relative;
+  label {
+    display: block;
+    text-transform: capitalize;
+    font-size: 0.8em;
+    font-weight: $semiBold;
+  }
+
+  input {
+    border: 1px solid $neutralGrayLight;
+    outline: none;
+    width: 100%;
+    padding: 1em;
+    border-radius: 8px;
+    margin: 0.5em 0;
+  }
+
+  .input-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    bottom: 18%;
+  }
+}
