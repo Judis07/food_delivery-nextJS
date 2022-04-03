@@ -1,0 +1,51 @@
+@import "./variables.scss";
+
+.containerSlider {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.activeAnim {
+  display: block;
+  text-align: center;
+  width: 30em;
+  color: $neutralWhite;
+
+  .title {
+    font-size: 32px;
+    font-weight: $semiBold;
+    margin-bottom: 0.5em;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    font-weight: $regular;
+  }
+}
+
+.containerDots {
+  display: flex;
+  margin-top: 2em;
+}
+.dot {
+  cursor: pointer;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  border: 3px solid $neutralWhite;
+  margin: 0 5px;
+  background: $neutralWhite;
+  opacity: 0.3;
+}
+.dot.active {
+  background: $neutralWhite;
+  opacity: 1;
+}

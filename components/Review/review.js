@@ -1,8 +1,8 @@
 import LandscapeCard from "../Cards/FoodCard/landscapeCard";
 import PortraitCard from "../Cards/FoodCard/potraitCard";
 import RatingCard from "../Cards/RatingCard/ratingCard";
-// import RatingCard from "../RatingCard";
 // import Slider from "../Slider";
+import Slider from "../Slider/slider";
 import styles from "../../styles/review.module.scss";
 
 const Review = () => {
@@ -33,7 +33,7 @@ const Review = () => {
         </div>
       </div>
 
-      {/* <Slider /> */}
+      <Slider />
     </div>
   );
 };
