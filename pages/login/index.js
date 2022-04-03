@@ -1,14 +1,20 @@
 import Link from "next/link";
-import LoginForm from "../../components/forms/login";
+import dynamic from "next/dynamic";
+// import LoginForm from "../../components/forms/login";
+import CustomImage from "../../components/CustomImage/customImage";
 import Review from "../../components/Review/review";
 import styles from "../../styles/login.module.scss";
+
+const LoginForm = dynamic(() => import("../../components/forms/login"), {
+  loading: () => <b>Loading..........</b>,
+});
 
 const Login = () => {
   return (
     <div className={styles.loginContainer}>
       <div className={styles.loginForm}>
         <div className={styles.logo}>
-          <img
+          <CustomImage
             src="https://res.cloudinary.com/dyvivj6d5/image/upload/v1648211535/logo_twd2km.svg"
             alt="Food Delivery"
           />
