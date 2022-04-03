@@ -1,3 +1,4 @@
+import CustomImage from "../../CustomImage/customImage";
 import styles from "../../../styles/foodCard.module.scss";
 
 const LandscapeCard = (props) => {
@@ -7,7 +8,7 @@ const LandscapeCard = (props) => {
     <div className={styles.cardContainer}>
       <div className={styles.landscape}>
         <div className={styles.cardImage}>
-          <img src={image} alt={name} />
+          <CustomImage src={image} alt={name} />
         </div>
 
         <div className={styles.cardDetail}>

@@ -1,9 +1,18 @@
-import LandscapeCard from "../Cards/FoodCard/landscapeCard";
-import PortraitCard from "../Cards/FoodCard/potraitCard";
+import dynamic from "next/dynamic";
+
+// import LandscapeCard from "../Cards/FoodCard/landscapeCard";
+// import PortraitCard from "../Cards/FoodCard/potraitCard";
 import RatingCard from "../Cards/RatingCard/ratingCard";
-// import Slider from "../Slider";
 import Slider from "../Slider/slider";
 import styles from "../../styles/review.module.scss";
+
+const LandscapeCard = dynamic(() => import("../Cards/FoodCard/landscapeCard"), {
+  loading: () => <b>Loading..........</b>,
+});
+
+const PortraitCard = dynamic(() => import("../Cards/FoodCard/potraitCard"), {
+  loading: () => <b>Loading..........</b>,
+});
 
 const Review = () => {
   return (

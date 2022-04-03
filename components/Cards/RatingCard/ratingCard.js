@@ -1,3 +1,4 @@
+import CustomImage from "../../CustomImage/customImage";
 import styles from "../../../styles/ratingCard.module.scss";
 
 const RatingCard = () => {
@@ -31,7 +32,7 @@ const RatingCard = () => {
       <div className={styles.userReviews}>
         <div className={styles.review}>
           <div className={styles.userImage}>
-            <img
+            <CustomImage
               src="https://res.cloudinary.com/dyvivj6d5/image/upload/v1648284883/savannah_hmboli.png"
               alt=""
             />
@@ -66,7 +67,7 @@ const RatingCard = () => {
 
         <div className={styles.review}>
           <div className={styles.userImage}>
-            <img
+            <CustomImage
               src="https://res.cloudinary.com/dyvivj6d5/image/upload/v1648285496/jacob_pxo4qn.png"
               alt=""
             />
