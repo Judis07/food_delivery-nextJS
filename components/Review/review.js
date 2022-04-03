@@ -1,6 +1,7 @@
-import LandscapeCard from "../FoodCard/landscape";
-import PortraitCard from "../FoodCard/portrait";
-import RatingCard from "../RatingCard";
+import LandscapeCard from "../Cards/FoodCard/landscapeCard";
+import PortraitCard from "../Cards/FoodCard/potraitCard";
+import RatingCard from "../Cards/RatingCard/ratingCard";
+// import RatingCard from "../RatingCard";
 // import Slider from "../Slider";
 import styles from "../../styles/review.module.scss";
 
@@ -21,7 +22,7 @@ const Review = () => {
           />
         </div>
 
-        <div className={styles.bottomcard}>
+        <div className={styles.bottomCard}>
           <LandscapeCard
             name="Nigiri Set"
             image="https://res.cloudinary.com/dyvivj6d5/image/upload/v1648281052/nigiri_set_jukgnn.png"

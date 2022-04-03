@@ -1,6 +1,6 @@
 import Link from "next/link";
 import LoginForm from "../../components/forms/login";
-
+import Review from "../../components/Review/review";
 import styles from "../../styles/login.module.scss";
 
 const Login = () => {
@@ -26,7 +26,7 @@ const Login = () => {
         </div>
       </div>
 
-      {/* <Review /> */}
+      <Review />
     </div>
   );
 };

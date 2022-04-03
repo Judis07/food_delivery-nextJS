@@ -1,28 +1,30 @@
+import styles from "../../../styles/foodCard.module.scss";
+
 const LandscapeCard = (props) => {
   const { name, image, about, price } = props;
 
   return (
-    <div className="card-container ">
-      <div className="landscape">
-        <div className="card-image">
+    <div className={styles.cardContainer}>
+      <div className={styles.landscape}>
+        <div className={styles.cardImage}>
           <img src={image} alt={name} />
         </div>
 
-        <div className="card-detail">
-          <div className="name">{name}</div>
+        <div className={styles.cardDetail}>
+          <div className={styles.name}>{name}</div>
 
-          <div className="about">{about}</div>
+          <div className={styles.about}>{about}</div>
 
-          <div className="price">{price}</div>
+          <div className={styles.price}>{price}</div>
         </div>
 
-        <div className="card-cta">
-          <div className="counter">
-            <div className="decrease">-</div>
-            <div className="number">1</div>
-            <div className="increase">+</div>
+        <div className={styles.cardCta}>
+          <div className={styles.counter}>
+            <div className={styles.decrease}>-</div>
+            <div className={styles.number}>1</div>
+            <div className={styles.increase}>+</div>
           </div>
-          <div className="cart">+ Add to cart</div>
+          <div className={styles.cart}>+ Add to cart</div>
         </div>
       </div>
     </div>

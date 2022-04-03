@@ -1,0 +1,111 @@
+@import "./variables.scss";
+
+.cardContainer {
+  background-color: $neutralWhite;
+  padding: 1em;
+  border: 0.84px solid $neutralGrayLightest;
+  border-radius: 13.44px;
+  width: 100%;
+
+  .cardImage {
+    height: 10em;
+    border-radius: 13.44px;
+    overflow: hidden;
+  }
+
+  .cardDetail {
+    .name {
+      font-weight: bold;
+      font-size: 1em;
+      margin: 0.5em 0;
+      color: $neutralBlack;
+    }
+
+    .about {
+      font-weight: $regular;
+      font-size: 0.9em;
+      color: $neutralGray;
+      letter-spacing: 0.168px;
+      line-height: 15px;
+      margin-bottom: 0.5em;
+    }
+
+    .cardFooter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price {
+      font-weight: $bold;
+      font-size: 1.5em;
+
+      @media only screen and (max-width: $desktopMedium) {
+        font-size: 1.2em;
+      }
+    }
+
+    .cardCta {
+      color: $primaryDefault;
+      font-size: 1.2em;
+      background-color: $primaryLight;
+      padding: 0.2em 0.5em;
+      border-radius: 20px;
+    }
+  }
+}
+
+.landscape {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  column-gap: 2em;
+
+  @media only screen and (max-width: $desktopMedium) {
+    column-gap: 1em;
+  }
+
+  .cardImage {
+    height: 8em;
+  }
+
+  .cardCta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .counter {
+      display: flex;
+      align-items: center;
+
+      div {
+        font-weight: $semiBold;
+      }
+
+      .decrease,
+      .increase {
+        background-color: $neutralGrayLightest;
+        border-radius: 15px;
+        padding: 0.1em 0.5em;
+      }
+
+      .number {
+        margin: 0 0.5em;
+        font-size: 0.9em;
+      }
+    }
+
+    .cart {
+      color: $primaryDefault;
+      font-size: 0.8em;
+      background-color: $primaryLight;
+      padding: 0.8em 1em;
+      font-weight: $semiBold;
+      border-radius: 6.7726px;
+      margin-top: 1em;
+
+      display: flex;
+      align-items: center;
+    }
+  }
+}

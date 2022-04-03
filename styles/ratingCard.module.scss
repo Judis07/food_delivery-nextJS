@@ -1,0 +1,129 @@
+@import "./variables.scss";
+
+.ratingCardContainer {
+  background-color: $neutralWhite;
+  filter: drop-shadow(0px 0px 80px rgba(49, 57, 120, 0.3));
+  border-radius: 18px;
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+
+    @media only screen and (max-width: $desktopMedium) {
+      padding: 0.5em;
+    }
+
+    .section {
+      width: 50%;
+    }
+
+    .overallTxt {
+      color: $neutralBlack;
+      font-weight: $semiBold;
+      font-size: 0.8em;
+    }
+
+    .votes {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .ratingTxt {
+        color: $primaryDefault;
+        font-weight: $semiBold;
+        font-size: 1em;
+      }
+
+      .voteTxt {
+        font-size: 0.5em;
+        color: $neutralGray;
+      }
+    }
+
+    .reviewBtn {
+      cursor: pointer;
+      border: 1px solid $primaryDefault;
+      color: $primaryDefault;
+      border-radius: 8px;
+      font-weight: $semiBold;
+      font-size: 0.8em;
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .sort {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    color: $neutralGray;
+    font-size: 0.8em;
+
+    div {
+      border: 1px solid $neutralGrayLight;
+      border-radius: 7.15429px;
+      padding: 0.5em;
+      margin: 1em 0;
+
+      span {
+        color: $neutralBlack;
+      }
+    }
+  }
+
+  .userReviews {
+    padding: 1em;
+
+    .review {
+      display: flex;
+      align-items: flex-start;
+      margin: 2em 0;
+
+      .userImage {
+        width: 5em;
+        margin-right: 0.5em;
+      }
+
+      .userDetail {
+        .name {
+          color: $neutralBlack;
+          font-weight: $bold;
+          font-size: 0.9em;
+        }
+
+        .rating {
+          display: flex;
+          align-items: center;
+          margin: 0.5em 0;
+
+          span {
+            display: flex;
+          }
+
+          .days {
+            font-size: 0.6em;
+            color: $neutralGray;
+            margin-left: 0.5em;
+          }
+        }
+
+        .comment {
+          color: $neutralBlack;
+          font-weight: $regular;
+          font-size: 0.8em;
+          line-height: 18px;
+          letter-spacing: 0.0894286px;
+          margin-top: 1em;
+        }
+
+        .likeAction {
+          margin: 0.5em 0;
+          width: 5em;
+        }
+      }
+    }
+  }
+}
