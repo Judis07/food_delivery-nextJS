@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+.reviewSection {
+  width: 65%;
+  height: 100%;
+  background-color: $primaryHover;
+  padding: 2em;
+
+  @media only screen and (max-width: $desktopMedium) {
+    width: 70%;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    display: none;
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .gridContainer {
+    max-width: 50em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 50px);
+    column-gap: 1em;
+
+    .firstCard {
+      grid-column: 2 / 7;
+    }
+
+    .secondCard {
+      grid-column: 7 / 12;
+      grid-row: 2;
+    }
+
+    .bottomCard {
+      z-index: 2;
+      width: 100%;
+      grid-row: 10;
+      grid-column: 1 / 11;
+      z-index: 5;
+    }
+  }
+}
