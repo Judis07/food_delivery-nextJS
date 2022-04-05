@@ -1,4 +1,5 @@
 import Input from "../Inputs/inputs";
+import ProfileInfo from "../ProfileInfo/profileInfo";
 import MobileNav from "../MobileNav/mobileNav";
 import styles from "../../styles/layout.module.scss";
 
@@ -41,7 +42,7 @@ const Layout = ({ children }) => {
                 />
               </div>
 
-              {/* <ProfileInfo /> */}
+              <ProfileInfo />
 
               <MobileNav />
             </nav>
