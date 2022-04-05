@@ -1,6 +1,5 @@
-import CartIcon from "./cart.svg";
 import Input from "../Inputs/inputs";
-
+import MobileNav from "../MobileNav/mobileNav";
 import styles from "../../styles/layout.module.scss";
 
 const Layout = ({ children }) => {
@@ -41,7 +40,7 @@ const Layout = ({ children }) => {
 
               {/* <ProfileInfo /> */}
 
-              {/* <MobileNav /> */}
+              <MobileNav />
             </nav>
           </div>
         </div>

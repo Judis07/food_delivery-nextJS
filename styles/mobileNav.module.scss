@@ -1,0 +1,51 @@
+@import "./variables.scss";
+
+.navbar {
+  display: none;
+
+  .navLogo {
+    cursor: pointer;
+    background: $neutralGrayLightest;
+    padding: 1em;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: $primaryHover;
+    overflow-x: hidden;
+    transition: 0.5s;
+
+    div {
+      padding: 8px 8px 8px 32px;
+      padding: 1em 1.5em;
+      text-decoration: none;
+      font-size: 1.2em;
+      color: $neutralWhite;
+      display: block;
+      transition: 0.3s;
+    }
+  }
+
+  .active {
+    width: 250px;
+
+    .closeIcon {
+      font-weight: $bold;
+      text-align: end;
+      font-size: 1.5em;
+    }
+  }
+
+  @media only screen and (max-width: $desktopMedium) {
+    display: block;
+  }
+}
