@@ -35,7 +35,10 @@ const Layout = ({ children }) => {
               <div className={styles.link}>My orders</div>
               <div className={styles.cart}>
                 <div className={styles.items}>4</div>
-                {/* <img src={CartIcon} alt="Cart" /> */}
+                <img
+                  src="https://res.cloudinary.com/dyvivj6d5/image/upload/v1649165970/cart_mdpadb.svg"
+                  alt="Cart"
+                />
               </div>
 
               {/* <ProfileInfo /> */}
