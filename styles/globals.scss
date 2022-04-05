@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
-* {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   font-family: "Nunito", sans-serif;
@@ -26,4 +28,15 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1,
+p,
+input {
+  margin: initial;
+  font-size: initial;
+}
+
+input::placeholder {
+  font-size: initial;
 }
