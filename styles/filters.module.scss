@@ -1,0 +1,49 @@
+@import "./variables.scss";
+
+.filtersContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3em 0;
+
+  @media only screen and (max-width: $desktopSmall) {
+    flex-wrap: wrap;
+    row-gap: 2em;
+  }
+
+  .filter {
+    border: 2px solid $neutralGrayLightest;
+    padding: 1em 0;
+    width: 15%;
+    border-radius: 16px;
+    cursor: pointer;
+    text-align: center;
+
+    @media only screen and (max-width: $desktopSmall) {
+      width: 30%;
+    }
+
+    &:hover {
+      background-color: $primaryLightest;
+      border: 2px solid $primaryDefault;
+    }
+
+    .filterImage {
+      img {
+        width: 2em;
+      }
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    .filterName {
+      font-weight: $bold;
+      text-transform: capitalize;
+    }
+  }
+
+  .isSelected {
+    color: $primaryDefault;
+    border: 2px solid $primaryDefault;
+  }
+}

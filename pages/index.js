@@ -2,6 +2,7 @@ import Head from "next/head";
 import Layout from "../components/Layout/layout";
 import Banner from "../components/Banner/banner";
 import Image from "next/image";
+import Restaurants from "../components/Restaurants/restaurants";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <div>
         <Layout>
           <Banner />
+          <Restaurants />
         </Layout>
       </div>
     </div>
