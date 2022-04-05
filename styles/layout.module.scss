@@ -1,0 +1,87 @@
+@import "./variables.scss";
+
+.layoutContainer {
+  .innerContainer {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .flexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header {
+    padding: 1em 0;
+    border: 1px solid $neutralGrayLightest;
+    margin-bottom: 1em;
+
+    .logo {
+      width: 6em;
+      margin-right: 2em;
+    }
+
+    .searchBar {
+      width: 15em;
+
+      @media only screen and (max-width: $mobile) {
+        display: none;
+      }
+      .inputContainer {
+        margin: initial;
+
+        input {
+          background: #edeef2;
+          border-radius: 12px;
+        }
+
+        .inputIcon {
+          bottom: 28%;
+        }
+      }
+    }
+
+    .navigation {
+      // width: 30%;
+
+      & > div {
+        margin-left: 1em;
+      }
+
+      .link {
+        font-weight: $bold;
+        color: $neutralBlack;
+
+        @media only screen and (max-width: $desktopMedium) {
+          display: none;
+        }
+      }
+
+      .cart {
+        background: #f3f4ff;
+        padding: 0.8em;
+        border-radius: 20px;
+        position: relative;
+        display: flex;
+
+        .items {
+          position: absolute;
+          top: 0;
+          right: -0.5em;
+          color: $neutralWhite;
+          background-color: $primaryDefault;
+          font-weight: $semiBold;
+          padding: 0.5em 0.8em;
+          font-size: 10px;
+          border-radius: 50%;
+        }
+
+        img {
+          width: 1.5em;
+        }
+      }
+    }
+  }
+}
