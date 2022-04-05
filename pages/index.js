@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/Layout/layout";
+import Banner from "../components/Banner/banner";
 import Image from "next/image";
 
 export default function Home() {
@@ -12,7 +13,9 @@ export default function Home() {
       </Head>
 
       <div>
-        <Layout>test</Layout>
+        <Layout>
+          <Banner />
+        </Layout>
       </div>
     </div>
   );
