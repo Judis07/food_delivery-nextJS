@@ -25,6 +25,7 @@ const Layout = ({ children }) => {
                   icon="https://res.cloudinary.com/dyvivj6d5/image/upload/v1648188073/search_h2cotd.png"
                   getValue={() => {}}
                   isRequired={true}
+                  variant="variant2"
                 />
               </div>
             </div>

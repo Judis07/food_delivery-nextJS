@@ -11,6 +11,7 @@ const Input = (props) => {
     changeShowPass,
     isRequired,
     icon,
+    variant,
   } = props;
 
   const [value, setValue] = useState("");
@@ -21,23 +22,25 @@ const Input = (props) => {
     setValue(event.target.value);
   };
   return (
-    <div className={styles.inputContainer}>
-      <label htmlFor={label}>{label}</label>
+    <div className={styles[variant]}>
+      <div className={styles.inputContainer}>
+        <label htmlFor={label}>{label}</label>
 
-      <input
-        type={type}
-        name={label}
-        value={value}
-        onChange={handleChange}
-        required={isRequired}
-        placeholder={placeholder}
-      />
+        <input
+          type={type}
+          name={label}
+          value={value}
+          onChange={handleChange}
+          required={isRequired}
+          placeholder={placeholder}
+        />
 
-      {icon && (
-        <div onClick={changeShowPass} className={styles.inputIcon}>
-          <img src={icon} alt="" />
-        </div>
-      )}
+        {icon && (
+          <div onClick={changeShowPass} className={styles.inputIcon}>
+            <img src={icon} alt="" />
+          </div>
+        )}
+      </div>
     </div>
   );
 };

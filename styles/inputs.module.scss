@@ -17,6 +17,12 @@
     padding: 0.9em;
     border-radius: 8px;
     margin: 0.5em 0;
+    font-size: 0.9em;
+
+    &::placeholder {
+      font-size: 0.9em;
+      padding: initial;
+    }
   }
 
   .inputIcon {
@@ -24,5 +30,20 @@
     position: absolute;
     right: 6%;
     bottom: 25%;
+  }
+}
+
+.variant2 {
+  .inputContainer {
+    margin: initial;
+
+    input {
+      background: #edeef2;
+      border-radius: 12px;
+    }
+
+    .inputIcon {
+      bottom: 32%;
+    }
   }
 }

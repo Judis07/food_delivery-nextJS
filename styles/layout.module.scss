@@ -25,21 +25,8 @@
 
     .searchBar {
       width: 15em;
-
       @media only screen and (max-width: $mobile) {
         display: none;
-      }
-      .inputContainer {
-        margin: initial;
-
-        input {
-          background: #edeef2;
-          border-radius: 12px;
-        }
-
-        .inputIcon {
-          bottom: 28%;
-        }
       }
     }
 
