@@ -1,0 +1,14 @@
+.cartContainer {
+  position: relative;
+  .items {
+    position: absolute;
+    top: -3px;
+    right: -0.7em;
+    color: #ffffff;
+    background-color: #4e60ff;
+    font-weight: 600;
+    padding: 0.5em 0.8em;
+    font-size: 7px;
+    border-radius: 50%;
+  }
+}
