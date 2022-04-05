@@ -1,0 +1,109 @@
+@import "./variables.scss";
+
+.restaurantsContainer {
+  margin: 1.5em 0;
+
+  .sectionTitle {
+    color: $neutralBlack;
+    font-weight: $regular;
+    font-size: 1.25em;
+    margin-bottom: 1.5em;
+  }
+
+  .flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .restaurantCard {
+    position: relative;
+    width: 30%;
+    border: 1px solid $neutralGrayLightest;
+    border-radius: 16px;
+    margin-bottom: 2em;
+    overflow: hidden;
+
+    @media only screen and (max-width: $desktopSmall) {
+      width: 48%;
+    }
+
+    @media only screen and (max-width: $mobileMedium) {
+      width: 100%;
+    }
+
+    .featured {
+      position: absolute;
+      background-color: $primaryDefault;
+      color: $neutralWhite;
+      padding: 0.8em 1.5em;
+      right: 0;
+      border-bottom-left-radius: 16px;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      font-weight: $semiBold;
+    }
+
+    .cardDetail {
+      padding: 1em;
+
+      .cardName {
+        font-weight: $bold;
+        color: $neutralBlack;
+        font-size: 1.25em;
+      }
+
+      .cardInfo {
+        display: flex;
+        align-items: center;
+        font-weight: $semiBold;
+        color: $neutralGray;
+        font-size: 0.8em;
+        margin: 0.5em 0;
+
+        div {
+          margin-right: 0.5em;
+        }
+
+        .timeIcon {
+          display: flex;
+          align-items: center;
+        }
+
+        .circle {
+          background-color: $primaryDefault;
+          width: 0.3em;
+          height: 0.3em;
+          border-radius: 50%;
+        }
+      }
+
+      .cardTags {
+        display: flex;
+        align-items: center;
+        margin-top: 1em;
+
+        .cardTag {
+          display: flex;
+          align-items: center;
+          text-transform: capitalize;
+          background-color: $neutralGrayLightest;
+          color: $neutralBlack;
+          font-size: 0.8em;
+          padding: 0.3em 1em;
+          border-radius: 25px;
+          margin-right: 0.5em;
+
+          .tagIcon {
+            width: 1em;
+            display: flex;
+            align-items: center;
+          }
+
+          div {
+            margin-right: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
