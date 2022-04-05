@@ -1,0 +1,90 @@
+@import "./variables.scss";
+
+.bannerContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5em 0;
+
+  @media only screen and (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  .discountCard {
+    width: 48%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 16px;
+    padding: 0 2em;
+    @media only screen and (max-width: $desktopMedium) {
+      padding: 0 1em;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      width: 100%;
+      margin-bottom: 1.5em;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .cardImage {
+      @media only screen and (max-width: $mobile) {
+        width: 50%;
+        margin: 0 auto;
+        display: contents;
+      }
+
+      @media only screen and (max-width: $mobileMedium) {
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+
+      @media only screen and (max-width: $mobile) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+    }
+
+    .title {
+      font-size: 1.5em;
+      color: $neutralBlack;
+      font-weight: $semiBold;
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+      @media only screen and (max-width: $desktopMedium) {
+        font-size: 1.2em;
+      }
+    }
+
+    .discount {
+      text-transform: uppercase;
+      font-size: 2.5em;
+      font-weight: $bold;
+      margin-bottom: 1em;
+
+      @media only screen and (max-width: $desktopMedium) {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        grid-row: 2;
+      }
+    }
+
+    .target {
+      color: $neutralGray;
+      margin: 1em 0;
+      font-size: 0.9em;
+
+      @media only screen and (max-width: $mobile) {
+        text-align: end;
+      }
+    }
+  }
+}
