@@ -1,9 +1,10 @@
+import { Card } from "antd";
 import CustomImage from "../../CustomImage/customImage";
 import styles from "../../../styles/ratingCard.module.scss";
 
 const RatingCard = () => {
   return (
-    <div className={styles.ratingCardContainer}>
+    <Card className={styles.ratingCardContainer}>
       <div className={styles.head}>
         <div className={styles.section}>
           <div className={styles.overallTxt}>Overall rating</div>
@@ -99,7 +100,7 @@ const RatingCard = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Card>
   );
 };
 
