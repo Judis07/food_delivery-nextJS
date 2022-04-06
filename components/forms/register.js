@@ -72,6 +72,7 @@ const LoginForm = (props) => {
         icon="https://res.cloudinary.com/dyvivj6d5/image/upload/v1648279422/password-eye_r62wun.svg"
         getValue={getValueFn}
         changeShowPass={changeShowPassFn}
+        showPass={showPass}
         isRequired={true}
       />
 
@@ -82,6 +83,7 @@ const LoginForm = (props) => {
         icon="https://res.cloudinary.com/dyvivj6d5/image/upload/v1648279422/password-eye_r62wun.svg"
         getValue={getValueFn}
         changeShowPass={changeShowPassFn}
+        showPass={showPass}
         isRequired={true}
       />
 
