@@ -6,7 +6,7 @@ import Review from "../../components/Review/review";
 import styles from "../../styles/login.module.scss";
 
 const LoginForm = dynamic(() => import("../../components/forms/login"), {
-  loading: () => <b>Loading..........</b>,
+  loading: () => <p>loading</p>,
 });
 
 const Login = () => {
