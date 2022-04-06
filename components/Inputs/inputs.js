@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 
 import styles from "../../styles/inputs.module.scss";
 
@@ -9,6 +10,7 @@ const Input = (props) => {
     placeholder,
     getValue,
     changeShowPass,
+    showPass,
     isRequired,
     icon,
     variant,
@@ -35,11 +37,22 @@ const Input = (props) => {
           placeholder={placeholder}
         />
 
-        {icon && (
+        {icon &&
+          (showPass ? (
+            <div onClick={changeShowPass} className={styles.inputIcon}>
+              <EyeOutlined />
+            </div>
+          ) : (
+            <div onClick={changeShowPass} className={styles.inputIcon}>
+              <EyeInvisibleOutlined />
+            </div>
+          ))}
+
+        {/* {icon && (
           <div onClick={changeShowPass} className={styles.inputIcon}>
             <img src={icon} alt="" />
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

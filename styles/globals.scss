@@ -50,6 +50,12 @@ input::placeholder {
   padding: 1em;
 }
 
+// ant icon default overide
+
+.anticon {
+  color: gray;
+}
+
 // carasoul default override
 .ant-carousel {
   width: 100%;
