@@ -41,3 +41,9 @@ input {
 input::placeholder {
   font-size: initial;
 }
+
+// card default overide
+
+.ant-card-body {
+  padding: 1em;
+}

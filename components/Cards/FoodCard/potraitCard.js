@@ -1,10 +1,11 @@
+import { Card } from "antd";
 import CustomImage from "../../CustomImage/customImage";
 import styles from "../../../styles/foodCard.module.scss";
 
 const PortraitCard = (props) => {
   const { name, image, about, price } = props;
   return (
-    <div className={styles.cardContainer}>
+    <Card className={styles.cardContainer}>
       <div>
         <div className={styles.cardImage}>
           <CustomImage src={image} alt={name} />
@@ -21,7 +22,7 @@ const PortraitCard = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </Card>
   );
 };
 
