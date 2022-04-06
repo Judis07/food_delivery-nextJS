@@ -1,15 +1,14 @@
+import { Card } from "antd";
 import Cart from "../../Cart/cart";
 import styles from "../../../styles/restaurants.module.scss";
 
-const Card = (props) => {
+const RestaurantCard = (props) => {
   const { image, name, distance, minPrice, tags, inCart, isFeatured } = props;
   return (
-    <div className={styles.restaurantCard}>
+    <Card className={styles.restaurantCard} cover={<img alt="" src={image} />}>
       {isFeatured && <div className={styles.featured}>Featured</div>}
 
-      <div className={styles.cardImage}>
-        <img src={image} alt="" />
-      </div>
+      {/* <div className={styles.cardImage}><img src={image} alt="" /></div> */}
 
       <div className={styles.cardDetail}>
         <div className={styles.flexContainer}>
@@ -41,8 +40,8 @@ const Card = (props) => {
           ))}
         </div>
       </div>
-    </div>
+    </Card>
   );
 };
 
-export default Card;
+export default RestaurantCard;

@@ -37,6 +37,7 @@
       background-color: $primaryDefault;
       color: $neutralWhite;
       padding: 0.8em 1.5em;
+      top: 0;
       right: 0;
       border-bottom-left-radius: 16px;
       text-transform: uppercase;
@@ -45,7 +46,7 @@
     }
 
     .cardDetail {
-      padding: 1em;
+      padding: 0.5em;
 
       .cardName {
         font-weight: $bold;
