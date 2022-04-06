@@ -1,11 +1,19 @@
 import { Card } from "antd";
+import Image from "next/image";
 import Cart from "../../Cart/cart";
 import styles from "../../../styles/restaurants.module.scss";
 
 const RestaurantCard = (props) => {
   const { image, name, distance, minPrice, tags, inCart, isFeatured } = props;
   return (
-    <Card className={styles.restaurantCard} cover={<img alt="" src={image} />}>
+    <Card
+      className={styles.restaurantCard}
+      // cover={<img alt="" src={image} />}
+
+      cover={
+        <Image alt="" src={image} width={50} height={25} layout="responsive" />
+      }
+    >
       {isFeatured && <div className={styles.featured}>Featured</div>}
 
       {/* <div className={styles.cardImage}><img src={image} alt="" /></div> */}

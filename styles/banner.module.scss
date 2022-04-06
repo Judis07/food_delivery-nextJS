@@ -27,6 +27,7 @@
     }
 
     .cardImage {
+      text-align: center;
       @media only screen and (max-width: $mobile) {
         width: 50%;
         margin: 0 auto;
