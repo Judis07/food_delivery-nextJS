@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { data } from "./data";
+import { Carousel } from "antd";
 import styles from "../../styles/slider.module.scss";
 
 export default function Slider() {
@@ -9,9 +10,28 @@ export default function Slider() {
     setSlideIndex(index);
   };
 
+  const contentStyle = {
+    height: "160px",
+    color: "#fff",
+    lineHeight: "160px",
+    textAlign: "center",
+    // background: "#364d79",
+  };
+
   return (
     <div className={styles.containerSlider}>
-      {data.map((obj, index) => {
+      <Carousel>
+        {data.map((obj, index) => {
+          return (
+            <div key={obj.id}>
+              <div className="title">{obj.title}</div>
+
+              <div className="subtitle">{obj.subTitle}</div>
+            </div>
+          );
+        })}
+      </Carousel>
+      {/* {data.map((obj, index) => {
         return (
           <div
             key={obj.id}
@@ -26,9 +46,9 @@ export default function Slider() {
             <div className={styles.subtitle}>{obj.subTitle}</div>
           </div>
         );
-      })}
+      })} */}
 
-      <div className={styles.containerDots}>
+      {/* <div className={styles.containerDots}>
         {data.map((_, index) => (
           <div
             key={index}
@@ -40,7 +60,7 @@ export default function Slider() {
             }
           ></div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

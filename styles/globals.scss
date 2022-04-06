@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 *,
 *::before,
@@ -46,4 +48,30 @@ input::placeholder {
 
 .ant-card-body {
   padding: 1em;
+}
+
+// carasoul default override
+.ant-carousel {
+  width: 100%;
+
+  .slick-dots-bottom {
+    bottom: initial;
+    top: 10em;
+  }
+
+  .slick-slide {
+    text-align: center;
+    color: $neutralWhite;
+
+    .title {
+      font-size: 32px;
+      font-weight: $semiBold;
+      margin-bottom: 0.5em;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      font-weight: $regular;
+    }
+  }
 }
