@@ -11,7 +11,14 @@ const RestaurantCard = (props) => {
       // cover={<img alt="" src={image} />}
 
       cover={
-        <Image alt="" src={image} width={50} height={25} layout="responsive" />
+        <Image
+          alt=""
+          src={image}
+          width={50}
+          height={25}
+          layout="responsive"
+          priority={true}
+        />
       }
     >
       {isFeatured && <div className={styles.featured}>Featured</div>}

@@ -6,15 +6,15 @@ const BannerCard = (props) => {
   return (
     <div style={{ backgroundColor: bgColor }} className={styles.discountCard}>
       <div className={styles.cardImage}>
-        {/* <img src={image} alt={target} loading="lazy" /> */}
+        <img src={image} alt={target} loading="lazy" />
 
-        <Image
+        {/* <Image
           src={image}
           alt={target}
           width={300}
           height={200}
           layout="responsive"
-        />
+        /> */}
       </div>
 
       <div className={styles.details}>
