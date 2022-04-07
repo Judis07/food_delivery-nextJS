@@ -17,7 +17,7 @@ const RestaurantCard = (props) => {
           width={50}
           height={25}
           layout="responsive"
-          priority={true}
+          // priority={true}
         />
       }
     >
