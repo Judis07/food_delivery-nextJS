@@ -45,6 +45,8 @@ const LoginForm = () => {
 
       const { user } = res.data;
       //   setItemTOStorage("user", JSON.stringify(user));
+
+      localStorage.setItem("user", JSON.stringify(user));
       setLoading(false);
 
       router.push("/");

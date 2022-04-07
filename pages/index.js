@@ -1,10 +1,17 @@
+import { useContext } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
+import { Spin } from "antd";
+import AuthContext from "../stores/authContext";
 import Layout from "../components/Layout/layout";
 import Banner from "../components/Banner/banner";
-import Image from "next/image";
 import Restaurants from "../components/Restaurants/restaurants";
 
 export default function Home() {
+  const router = useRouter();
+
+  const user = useContext(AuthContext);
+
   return (
     <div>
       <Head>
