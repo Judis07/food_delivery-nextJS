@@ -6,13 +6,6 @@ import User from "../../models/User";
 export default async function handler(req, res) {
   const { method } = req;
 
-  const { email, password } = req.body;
-  //localhost:3000/api/users
-
-  //   console.log("getting here 1");
-
-  //   console.log(req.body);
-
   await NextCors(req, res, {
     // Options
     methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
@@ -21,10 +14,6 @@ export default async function handler(req, res) {
   });
 
   await dbConnect();
-
-  //   console.log("getting here 2");
-
-  //   res.status(400).json({ success: false });
 
   const maxAge = 3 * 24 * 60 * 60;
   const createToken = (id) => {
@@ -36,6 +25,8 @@ export default async function handler(req, res) {
   switch (method) {
     case "GET":
       try {
+        const { email, password } = req.query;
+
         const user = await User.login(email, password);
         const token = createToken(user._id);
         // res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
@@ -46,6 +37,8 @@ export default async function handler(req, res) {
       break;
     case "POST":
       try {
+        const { email, password } = req.body;
+
         const user = await User.create({ email, password });
         const token = createToken(user._id);
         // res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });

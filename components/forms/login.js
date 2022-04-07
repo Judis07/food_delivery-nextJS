@@ -37,8 +37,10 @@ const LoginForm = () => {
 
     try {
       const res = await axios.get(`${API_URL2}/users`, {
-        email,
-        password,
+        params: {
+          email,
+          password,
+        },
       });
 
       const { user } = res.data;
