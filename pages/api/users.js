@@ -6,8 +6,17 @@ export default async function handler(req, res) {
   const { method } = req;
 
   const { email, password } = req.body;
+  //localhost:3000/api/users
+
+  //   console.log("getting here 1");
+
+  //   console.log(req.body);
 
   await dbConnect();
+
+  //   console.log("getting here 2");
+
+  //   res.status(400).json({ success: false });
 
   const maxAge = 3 * 24 * 60 * 60;
   const createToken = (id) => {
@@ -21,7 +30,7 @@ export default async function handler(req, res) {
       try {
         const user = await User.login(email, password);
         const token = createToken(user._id);
-        res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
+        // res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
         res.status(200).json({ user: { id: user._id, email, token } });
       } catch (err) {
         res.status(400).json({ error: err.message });
@@ -31,7 +40,7 @@ export default async function handler(req, res) {
       try {
         const user = await User.create({ email, password });
         const token = createToken(user._id);
-        res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
+        // res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
         res.status(201).json({ user: { id: user._id, email, token } });
       } catch (err) {
         res.status(400).json({ error: err.message });

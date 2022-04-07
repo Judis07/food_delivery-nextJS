@@ -18,8 +18,6 @@ const Input = (props) => {
 
   const [value, setValue] = useState("");
 
-  console.log({ placeholder });
-
   const handleChange = (event) => {
     getValue(event.target.name, event.target.value);
 
