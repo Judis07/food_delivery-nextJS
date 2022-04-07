@@ -1,9 +1,22 @@
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Layout from "../components/Layout/layout";
 import Banner from "../components/Banner/banner";
 import Restaurants from "../components/Restaurants/restaurants";
 
 function Home() {
+  const router = useRouter();
+
+  const user =
+    typeof window !== "undefined" ? localStorage.getItem("user") : null;
+
+  useEffect(() => {
+    if (!user) {
+      router.push("/login");
+    }
+  }, [user]);
+
   return (
     <div>
       <Head>

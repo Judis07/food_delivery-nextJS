@@ -1,11 +1,15 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 // import { getUserEmail } from "../../config/utils";
 import styles from "../../styles/profileInfo.module.scss";
-const ProfileInfo = (props) => {
+const ProfileInfo = () => {
+  const router = useRouter();
+
   const [open, setOpen] = useState(false);
 
   const logout = () => {
-    // localStorage.removeItem("user");
+    localStorage.removeItem("user");
+    router.push("/");
     // props.history.push("/login");
   };
 
