@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
+import { message } from "antd";
 import { useRouter } from "next/router";
 import { API_URL2 } from "../../config/utils";
 import Input from "../Inputs/inputs";
@@ -44,12 +45,12 @@ const LoginForm = () => {
       });
 
       const { user } = res.data;
-      //   setItemTOStorage("user", JSON.stringify(user));
 
       localStorage.setItem("user", JSON.stringify(user));
       setLoading(false);
 
       router.push("/");
+      message.success("Logged in successfully :)");
     } catch (err) {
       if (err.response) {
         setError(err.response.data.error);
