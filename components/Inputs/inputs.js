@@ -18,6 +18,8 @@ const Input = (props) => {
 
   const [value, setValue] = useState("");
 
+  console.log({ placeholder });
+
   const handleChange = (event) => {
     getValue(event.target.name, event.target.value);
 
@@ -37,7 +39,12 @@ const Input = (props) => {
           placeholder={placeholder}
         />
 
-        {icon &&
+        {placeholder === "Search" ? (
+          <div className={styles.inputIcon}>
+            <img src={icon} alt="" />
+          </div>
+        ) : (
+          icon &&
           (showPass ? (
             <div onClick={changeShowPass} className={styles.inputIcon}>
               <EyeOutlined />
@@ -46,7 +53,8 @@ const Input = (props) => {
             <div onClick={changeShowPass} className={styles.inputIcon}>
               <EyeInvisibleOutlined />
             </div>
-          ))}
+          ))
+        )}
 
         {/* {icon && (
           <div onClick={changeShowPass} className={styles.inputIcon}>
