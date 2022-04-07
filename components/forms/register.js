@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { API_URL } from "../../config/utils";
+import { useRouter } from "next/router";
+import { API_URL2 } from "../../config/utils";
 import axios from "axios";
 import Link from "next/link";
 import Input from "../Inputs/inputs";
@@ -7,7 +8,9 @@ import Checkbox from "../Checkbox/checkbox";
 
 import styles from "../../styles/login.module.scss";
 
-const LoginForm = (props) => {
+const LoginForm = () => {
+  const router = useRouter();
+
   const [showPass, setShowPass] = useState(false);
 
   const [email, setEmail] = useState("");
@@ -33,7 +36,7 @@ const LoginForm = (props) => {
     setLoading(true);
 
     try {
-      const res = await axios.post(`${API_URL}/login`, {
+      const res = await axios.post(`${API_URL2}/users`, {
         email,
         password,
       });
@@ -42,7 +45,7 @@ const LoginForm = (props) => {
       //   setItemTOStorage("user", JSON.stringify(user));
       setLoading(false);
 
-      props.history.push("/");
+      router.push("/");
     } catch (err) {
       if (err.response) {
         setError(err.response.data.error);
@@ -95,7 +98,7 @@ const LoginForm = (props) => {
         {loading ? (
           <button>Loading...</button>
         ) : (
-          <button type="submit">Login</button>
+          <button type="submit">Register</button>
         )}
       </div>
 
