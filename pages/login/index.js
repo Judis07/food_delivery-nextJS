@@ -25,7 +25,7 @@ const Login = () => {
         </div>
 
         <div className={styles.signupSection}>
-          Don’t have an account?{" "}
+          Not signed up yet?{" "}
           <Link href="/register">
             <a className={styles.link}>Sign up</a>
           </Link>
